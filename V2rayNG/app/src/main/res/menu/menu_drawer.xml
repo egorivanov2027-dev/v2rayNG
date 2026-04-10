@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- ПУТЬ: V2rayNG/app/src/main/res/menu/menu_drawer.xml -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
@@ -28,10 +29,6 @@
 
     <group android:id="@+id/group_id2">
         <item
-            android:id="@+id/promotion"
-            android:icon="@drawable/ic_promotion_24dp"
-            android:title="@string/title_pref_promotion" />
-        <item
             android:id="@+id/logcat"
             android:icon="@drawable/ic_logcat_24dp"
             android:title="@string/title_logcat" />
@@ -47,7 +44,6 @@
             android:id="@+id/about"
             android:icon="@drawable/ic_about_24dp"
             android:title="@string/title_about" />
-        <!-- place holder for version text at the bottom -->
         <item
             android:id="@+id/placeholder"
             android:enabled="false"
