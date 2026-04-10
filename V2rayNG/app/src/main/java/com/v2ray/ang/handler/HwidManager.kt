@@ -7,7 +7,7 @@ import java.net.URL
 
 object HwidManager {
     // Замени на URL своего сервера
-    private const val CHECK_URL = "https://твой-сервер.com/check"
+    private const val CHECK_URL = "https://de-vpn.mooo.com/check"
 
     fun check(context: Context) {
         val hwid = Settings.Secure.getString(
