@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="app_name" type="string">True VPN</item>
+    <string name="app_name" translatable="false">True VPN</string>
 </resources>
     <string name="app_widget_name">Switch</string>
     <string name="app_tile_name">Switch</string>
