@@ -125,9 +125,8 @@ class MainActivity : HelperBaseActivity(), NavigationView.OnNavigationItemSelect
             }
         }.also { it.attach() }
 
-        val targetIndex = groups.indexOfFirst { it.id == mainViewModel.subscriptionId }.takeIf { it >= 0 } ?: (groups.size - 1)
-        binding.viewPager.setCurrentItem(targetIndex, false)
-
+        mainViewModel.subscriptionIdChanged("")
+        binding.viewPager.setCurrentItem(0, false)
         binding.tabGroup.isVisible = false
     }
 
