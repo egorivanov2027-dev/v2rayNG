@@ -128,7 +128,7 @@ class MainActivity : HelperBaseActivity(), NavigationView.OnNavigationItemSelect
         val targetIndex = groups.indexOfFirst { it.id == mainViewModel.subscriptionId }.takeIf { it >= 0 } ?: (groups.size - 1)
         binding.viewPager.setCurrentItem(targetIndex, false)
 
-        binding.tabGroup.isVisible = groups.size > 1
+        binding.tabGroup.isVisible = false
     }
 
     private fun handleFabAction() {
