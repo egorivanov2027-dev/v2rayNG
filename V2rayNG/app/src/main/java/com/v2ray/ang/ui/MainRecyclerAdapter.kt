@@ -58,7 +58,13 @@ class MainRecyclerAdapter(
             //Name address
             holder.itemMainBinding.tvName.text = profile.remarks
             holder.itemMainBinding.tvStatistics.text = getAddress(profile)
-            holder.itemMainBinding.tvType.text = profile.configType.name
+            val network = profile.network?.uppercase() ?: ""
+            val typeName = profile.configType.name
+            holder.itemMainBinding.tvType.text = when {
+                typeName == "CUSTOM" || typeName == "JSON" -> typeName
+                network.isNotEmpty() -> "$typeName / $network"
+                else -> typeName
+            }
 
             //TestResult
             val aff = MmkvManager.decodeServerAffiliationInfo(guid)
