@@ -106,9 +106,8 @@ class GroupServerFragment : BaseFragment<FragmentGroupServerBinding>(),
                 when (i + skip) {
                     0 -> showQRCode(guid)
                     1 -> share2Clipboard(guid)
-                    2 -> shareFullContent(guid)
-                    3 -> editServer(guid, profile)
-                    4 -> removeServer(guid, position)
+                    2 -> editServer(guid, profile)
+                    3 -> removeServer(guid, position)
                     else -> ownerActivity.toast("else")
                 }
             } catch (e: Exception) {
