@@ -129,7 +129,11 @@ class MainRecyclerAdapter(
      * @return Formatted address string
      */
     private fun getAddress(profile: ProfileItem): String {
-        return profile.description.nullIfBlank() ?: AngConfigManager.generateDescription(profile)
+        val server = profile.server ?: ""
+        val port = profile.serverPort ?: ""
+        if (server.isNotBlank() && port.isNotBlank()) return "$server : $port"
+        if (server.isNotBlank()) return server
+        return profile.description.nullIfBlank() ?: ""
     }
 
     /**
